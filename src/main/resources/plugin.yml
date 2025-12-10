@@ -1,0 +1,24 @@
+name: MultiModeGames
+version: 1.0
+main: com.tu.paquete.Main
+api-version: 1.18
+author: TuNombre
+depend: [Vault, PlaceholderAPI, WorldEdit]
+
+commands:
+  bw:
+    description: Comando principal de BedWars
+    usage: /bw <subcomando>
+    aliases: [bedwars]
+  sw:
+    description: Comando principal de SkyWars
+    usage: /sw <subcomando>
+    aliases: [skywars]
+
+permissions:
+  bw.admin:
+    description: Permisos para usar comandos de setup de BedWars
+    default: op
+  sw.admin:
+    description: Permisos para usar comandos de setup de SkyWars
+    default: op

@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.tu.paquete'
+version = '1.0'
+sourceCompatibility = '17'
+targetCompatibility = '17'
+
+repositories {
+    mavenCentral()
+    maven { url = "https://papermc.io/repo/repository/maven-public/" }
+    maven { url = "https://repo.extendedclip.com/content/repositories/placeholderapi/" }
+}
+
+dependencies {
+    // Paper API
+    compileOnly "io.papermc.paper:paper-api:1.18.2-R0.1-SNAPSHOT"
+    
+    // WorldEdit
+    compileOnly "com.sk89q.worldedit:worldedit-bukkit:7.2.12"
+    
+    // Vault
+    compileOnly "net.milkbowl:VaultAPI:1.7"
+    
+    // PlaceholderAPI
+    compileOnly "me.clip:placeholderapi:2.11.4"
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
